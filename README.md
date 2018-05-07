@@ -3,8 +3,18 @@ Generate Forms from JSON Spec
 
 ## Features
 1. Automatic Validation based on Types
-2. Layout Management
+2. Basic Layout Management
 
+
+## User
+### Installation
+```npm install @spillay/FormManager```
+### Usage
+Please note that this is a work in progress, the general idea is to define the form as a JSON object, what the code does is parses
+this and dynamically displays a form. The main purpose of the project is to simplify the creation of forms, apply validation and provide the 
+captured input.
+### Example
+Soon to come
 ## Developer
 ### Initial Setup
 Step 1. Install Required Packages
