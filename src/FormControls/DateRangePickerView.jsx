@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates'
 
 export class DateRangePickerView extends React.Component {

@@ -2,7 +2,7 @@
   "name": "@spillay/formmanager",
   "version": "1.0.1",
   "description": "Generate Forms based on a JSON Spec",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "contributors": [
     {
       "name": "Suresh Pillay",
@@ -74,6 +74,8 @@
     "react": "^16.3.2",
     "react-dates": "^16.6.1",
     "react-dom": "^16.3.2",
+    "react-with-styles": "^3.2.0",
+    "react-with-styles-interface-aphrodite": "^5.0.0",
     "webpack": "^4.6.0"
   }
 }
