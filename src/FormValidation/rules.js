@@ -42,8 +42,15 @@ export const isDRP = (field, fieldName) => {
 // console.log(`required :${field}`)
 }
 
-
-
+export const isSlider = (field, fieldName) => {
+  // console.log('in required ', 'fieldValue :', field, 'fieldName :', fieldName)
+  if (field>0 ) {
+    return null
+  } else {
+    return ErrorMessages.isRequired(fieldName)
+  }
+// console.log(`required :${field}`)
+}
 
 export const isString = (text, fieldName) => {
   const regexp = /^[a-zA-Z]+$/

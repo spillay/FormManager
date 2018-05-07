@@ -1,15 +1,5 @@
-export const ruleRunner = (field, name, ...validations) => {
-  return (state) => {
-    for (let v  of validations) {
-      let errorMessageFunc = v(state[field], field);
-      if (errorMessageFunc) {
-        return {[field]: errorMessageFunc};
-      }
-    }
-    return null;
-  };
-};
-export const ruleRunner2 = (field, name, validations) => {
+
+export const ruleRunner = (field, name, validations) => {
   // console.log("ruleRunner2","key:",field, "name :",name, "validations :",validations);
 //   validations.map((d,idx)=>{
 //     console.log("validations array ruleRunner2 :",d,"Index :",idx)

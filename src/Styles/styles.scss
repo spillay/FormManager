@@ -1,0 +1,15 @@
+
+//for the styling part import Precompiled SASS
+@import "~bootstrap/scss/bootstrap.scss"; // (notice the ~ (tilde) which points to the node modules folder)
+
+@import "~bootstrap-select/sass/bootstrap-select.scss";
+
+@import "~bootstrap-slider/src/sass/bootstrap-slider.scss";
+
+//fontawesome  icons
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import './base/react_dates_overrides';
+@import './base/settings';
+@import './base/app';

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { run, ruleRunner, ruleRunner2 } from './FormValidation/ruleRunner';
+import { run, ruleRunner } from './FormValidation/ruleRunner';
 import {
-    required, isSDP, isDRP, isString, isNumber, isCurrency,
+    required, isSDP, isDRP, isSlider, isString, isNumber, isCurrency,
     isCellnumber, minLength, maxLength, emailFormat
 } from './FormValidation/rules';
 import moment from 'moment';
 // import { SingleDatePicker, DateRangePicker } from 'react-dates'
 import {
-    TextView, TextAreaView, SelectView, RadioView, RangeView, CheckboxView, SingleDatePickerView, DateRangePickerView
+    TextView, TextAreaView, SelectView, RadioView, RangeView, SliderView, CheckboxView, SingleDatePickerView, DateRangePickerView
 } from './FormControls'
 
 
@@ -52,6 +52,13 @@ export default class DynamicForm extends React.Component {
                             break;
                         }
 
+                        case 'isSlider': {
+                            if (row.fieldValidations[key] == true) {
+                                validations.push(isSlider)  // push "required function"
+                            }
+                            break;
+                        }
+
                         case 'minLength': {
                             validations.push(minLength(row.fieldValidations[key])) // push "minLength function"
                             break;
@@ -82,7 +89,7 @@ export default class DynamicForm extends React.Component {
                     }
 
                 }
-                this.state.fieldValidations.push(ruleRunner2(row.key, row.label, validations)); // (field, name, validations)
+                this.state.fieldValidations.push(ruleRunner(row.key, row.label, validations)); // (field, name, validations)
             }
         })
 
@@ -201,10 +208,14 @@ export default class DynamicForm extends React.Component {
 
                         if (type == "select") {
                             input = <SelectView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} opts={opts} options={options} />
+
                         }
 
                         if (type == "range") {
-                            input = <RangeView _key={key} type={type} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            // input = <RangeView _key={key} type={type} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            input = <SliderView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+
+
                         }
 
                         if (type === "radio") {
@@ -222,6 +233,7 @@ export default class DynamicForm extends React.Component {
                             input = <DateRangePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
                         }
                         return (
+
                             <div key={idx} className={'form-group ' + columns}>
                                 <label key={"l" + key} htmlFor={key}> {m.label} : </label>
                                 {input}

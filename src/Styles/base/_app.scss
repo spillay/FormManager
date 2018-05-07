@@ -1,0 +1,66 @@
+
+	.validation-error{
+		color: #dc3545 !important;
+		font:  10px Verdana, "Verdana CE", Arial, "Arial CE",
+			"Lucida Grande CE", lucida, "Helvetica CE", Helvetica !important;			
+	}
+	.bootstrap-select .dropdown-toggle:focus {
+		outline:none!important;
+		background: rgb(248, 248, 248)!important;
+		
+	}
+	.bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+  color: $label-color!important;
+  background: rgb(248, 248, 248)!important;
+}
+
+
+label {
+	font:$label-font;
+    color:$label-color;
+}
+
+
+// custom css for slider
+.slider {
+	width:100%!important;
+}
+
+.slider.slider-horizontal:hover .tooltip.tooltip-main.top .tooltip-arrow:after,
+.slider.slider-vertical:hover .tooltip.tooltip-main.top .tooltip-arrow:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 40%;
+  bottom: -10px;
+  border: transparent 5px solid;
+  border-top: #000 5px solid;
+}
+
+.slider.slider-horizontal:hover, .slider.slider-vertical:hover {
+    .tooltip.tooltip-main {
+        opacity: 0.9 !important;
+    }
+    .tooltip-inner {
+        font-size: 90%;
+        width: auto;
+    }
+}
+
+.slider-handle {
+	background: $fa-color1!important;
+}
+
+.slider-selection {
+	background: #8283FF!important;
+}
+// end of slider
+
+
+.fa.fa-lock{
+	color:$fa-color1
+}
+

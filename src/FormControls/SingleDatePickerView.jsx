@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
 
