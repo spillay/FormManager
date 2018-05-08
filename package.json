@@ -1,6 +1,6 @@
 {
   "name": "@spillay/formmanager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate Forms based on a JSON Spec",
   "main": "build/index.js",
   "contributors": [
