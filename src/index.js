@@ -7,6 +7,6 @@ import $ from 'jquery';
 import './Styles/styles.scss' // scss files
 // import 'react-dates/lib/css/_datepicker.css'
 // import 'react-dates/initialize' 
-import  { ReactDatesDefaultThemeOverRide }  from './DynamicForm'  // custamised react-dates
+import  { ReactDatesDefaultThemeOverRide }  from './FormControls'  // custamised react-dates
 
 export {DynamicForm,BlankForm}
