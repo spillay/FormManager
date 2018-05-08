@@ -29,7 +29,6 @@ export class SliderView extends React.Component {
             <div key={"r" + this.props._key}>
                 <ReactBootstrapSlider
                     value={this.state.value}
-                   
                     handleChange={(e) => this.onChange(e)}
                     slideStop={(e) => this.onChange(e)}
                     style={{width:'100%;'}}

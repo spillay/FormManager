@@ -6,16 +6,9 @@ import {
     isCellnumber, minLength, maxLength, emailFormat
 } from './FormValidation/rules';
 import moment from 'moment';
+// import { SingleDatePicker, DateRangePicker } from 'react-dates'
 import {
-    TextView,
-    TextAreaView,
-    SelectView,
-    RadioView,
-    RangeView,
-    SliderView,
-    CheckboxView,
-    SingleDatePickerView,
-    DateRangePickerView
+    TextView, TextAreaView, SelectView, RadioView, RangeView, SliderView, CheckboxView, SingleDatePickerView, DateRangePickerView
 } from './FormControls'
 
 
