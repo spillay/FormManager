@@ -143,7 +143,7 @@ export default class DynamicForm extends React.Component {
         localFields[key] = e.target.value;
         this.setState({ fields: localFields, stage: "Incomplete" }, () => {  // call back function
             this.setState({ validationErrors: run(this.state.fields, this.state.fieldValidations) }, () => {
-                console.log(`newState onChange() :${JSON.stringify(this.state)}`) // print new state 
+                // console.log(`newState onChange() :${JSON.stringify(this.state)}`) // print new state 
                 if (Object.keys(this.state.validationErrors).length == 0) {
                     this.setState({ stage: "Complete" }, () => {
                         this.props.reload();

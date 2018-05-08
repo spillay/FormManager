@@ -11,7 +11,7 @@ export class SingleDatePickerView extends React.Component {
         this.state = {date:null}
     }
     onDateChange = (date) => {
-        console.log(`onDateChange key :${this.props._key}`," date ", date)
+        // console.log(`onDateChange key :${this.props._key}`," date ", date)
         this.setState({date:date});
         this.props.onChange({target:{value:date.format("MMM Do YYYY")}},this.props._key)
     } 
