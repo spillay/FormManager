@@ -14,7 +14,7 @@ const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
       placeholderText: '#0187b4',
     },
     sizing: {
-      inputWidth: 98
+      inputWidth: auto
     },
 
     font: {
