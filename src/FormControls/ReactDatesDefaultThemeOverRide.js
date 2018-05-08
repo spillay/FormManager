@@ -8,11 +8,11 @@ ThemedStyleSheet.registerInterface(aphroditeInterface);
 const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
   reactDates: {
     ...DefaultTheme.reactDates,
-    // color: {
-    //   ...DefaultTheme.reactDates.color,
-    //   // backgroundFocused: '#0187b4',
-    //   placeholderText: '#0187b4',
-    // },
+    color: {
+      ...DefaultTheme.reactDates.color,
+      // backgroundFocused: '#0187b4',
+      placeholderText: '#0187b4',
+    },
     sizing: {
       inputWidth: 105,
       arrowWidth: 20,
@@ -33,4 +33,4 @@ const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
   },
 });
 
-export { css, withStyles, ReactDatesDefaultThemeOverRide };
+export { ReactDatesDefaultThemeOverRide };
