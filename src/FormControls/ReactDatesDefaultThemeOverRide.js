@@ -33,4 +33,4 @@ const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
   },
 });
 
-export { ReactDatesDefaultThemeOverRide };
+export {  css, withStyles,ReactDatesDefaultThemeOverRide };
