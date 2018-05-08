@@ -14,7 +14,7 @@ export class DateRangePickerView extends React.Component {
         console.log(startDate,endDate);
         if (startDate!= null && endDate!= null){
             this.setState({startDate:startDate,endDate:endDate},()=>{
-                console.log(this.state);
+                // console.log(this.state);
                 this.props.onChange(
                     {target:{value:{startDate: startDate.format("MMM Do YYYY"),endDate:endDate.format("MMM Do YYYY")}}},
                     this.props._key
