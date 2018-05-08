@@ -15,7 +15,7 @@ const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
     },
     sizing: {
       inputWidth: 105,
-      arrowWidth: 20,
+      arrowWidth: 10,
     },
 
     font: {
