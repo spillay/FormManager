@@ -6,7 +6,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
   },
@@ -51,13 +51,13 @@ module.exports = {
           'sass-loader' // compiles Sass to CSS
         ]
       },
-        {
-          test: /\.(eot|woff|woff2|ttf|svg|png|PNG|jpe?g|gif)(\?\S*)?$/,
-          loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
-        }
+      {
+        test: /\.(eot|woff|woff2|ttf|svg|png|PNG|jpe?g|gif)(\?\S*)?$/,
+        loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
+      }
     ]
   },
-  
+
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
   },
@@ -65,7 +65,7 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? "warning" : false
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({debug: true}),
+    new webpack.LoaderOptionsPlugin({ debug: true }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

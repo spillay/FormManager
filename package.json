@@ -2,7 +2,7 @@
   "name": "@spillay/formmanager",
   "version": "1.0.4",
   "description": "Generate Forms based on a JSON Spec",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "contributors": [
     {
       "name": "Suresh Pillay",
@@ -14,12 +14,17 @@
     }
   ],
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack --mode production",
+    "webpack-watch": "webpack --mode development --watch",
+    "start": "nodemon -e src/styles/ -x \"npm run sass\" --exec 'npm run webpack-watch'",
+    "build": "npm run prebuild && npm run sass && webpack --mode production",
     "dev": "webpack --mode development && npm run build:tests",
     "build:tests": "rimraf test-dist/ && babel test/ --out-dir test-dist/",
     "test": "node node_modules/mocha/bin/mocha --compilers js:babel-core/register --reporter spec test-dist/*",
-    "clean": "rimraf dist/ && rimraf test-dist/"
+    "clean": "rimraf dist/ && rimraf test-dist/",
+    "sass:dist-min": "node-sass  --output-style=compressed --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/formmanager.min.css",
+    "sass:dist": "node-sass  --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/formmanager.css",
+    "sass": "npm run sass:dist-min && npm run sass:dist",
+    "prebuild": "mkdirp ./dist && mkdirp ./dist/css"
   },
   "repository": {
     "type": "git",
@@ -29,6 +34,9 @@
     "React",
     "Forms",
     "Dynamic"
+  ],
+  "files": [
+    "src/styles/*.scss"
   ],
   "devDependencies": {
     "babel-cli": "6.16.0",
@@ -57,7 +65,11 @@
     "gulp-mocha": "3.0.1",
     "gulp-rimraf": "0.2.0",
     "lodash.assign": "^4.2.0",
+    "mkdirp": "^0.5.1",
     "mocha": "3.2.0",
+    "node-sass": "^4.9.0",
+    "node-sass-tilde-importer": "^1.0.2",
+    "nodemon": "^1.17.4",
     "rimraf": "2.5.4",
     "run-sequence": "1.2.2",
     "webpack-cli": "^2.1.3"
@@ -76,9 +88,8 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "moment": "^2.22.1",
-    "node-sass": "^4.7.2",
     "popper.js": "^1.12.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
@@ -100,7 +111,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "moment": "^2.22.1",
     "node-sass": "^4.7.2",
     "popper.js": "^1.12.3",
