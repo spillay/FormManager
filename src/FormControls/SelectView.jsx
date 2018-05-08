@@ -13,7 +13,7 @@ export class SelectView extends React.Component {
     }
   }
   componentDidMount(){
-    $('.selectpicker').selectpicker()
+    //$('.selectpicker').selectpicker()
   }
 
 
