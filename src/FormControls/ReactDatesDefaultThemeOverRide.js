@@ -13,19 +13,19 @@ const ReactDatesDefaultThemeOverRide = ThemedStyleSheet.registerTheme({
       // backgroundFocused: '#0187b4',
       placeholderText: '#0187b4',
     },
-    sizing: {
-      inputWidth: 50,
-      //arrowWidth: 10,
-    },
+    // sizing: {
+    //   inputWidth: 50,
+    //   //arrowWidth: 10,
+    // },
 
     font: {
-      size: 12,
+      size: 11,
       captionSize: 12,
       input: {
-        size: 13,
-        lineHeight: '13px',
-        size_small: 13,
-        lineHeight_small: '13px',
+        size: 12,
+        lineHeight: '12px',
+        size_small: 12,
+        lineHeight_small: '12px',
 
       },
     },
