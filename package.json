@@ -35,6 +35,9 @@
     "Forms",
     "Dynamic"
   ],
+  "files": [
+    "dist/**"
+  ],
   "devDependencies": {
     "babel-cli": "6.16.0",
     "babel-core": "^6.18.0",
