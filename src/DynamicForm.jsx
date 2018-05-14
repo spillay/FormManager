@@ -1,35 +1,44 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { run, ruleRunner } from './FormValidation/ruleRunner';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { run,ruleRunner } from './FormValidation/ruleRunner';
 import {
     required, isSDP, isDRP, isSlider, isString, isNumber, isCurrency,
     isCellnumber, minLength, maxLength, emailFormat
 } from './FormValidation/rules';
-import moment from 'moment';
-// import { SingleDatePicker, DateRangePicker } from 'react-dates'
-import {
-    TextView, TextAreaView, SelectView, RadioView, RangeView, SliderView, CheckboxView, SingleDatePickerView, DateRangePickerView
-} from './FormControls'
+//import moment from 'moment';
+// import {
+//     TextView, TextAreaView, SelectView, RadioView, RangeView, SliderView, CheckboxView, SingleDatePickerView, DateRangePickerView
+// } from './FormControls'
+import {TextView} from './FormControls/TextView.jsx';
+import {TextAreaView} from './FormControls/TextAreaView.jsx';
+import {SelectView} from './FormControls/SelectView.jsx';
+import {RadioView} from './FormControls/RadioView.jsx';
+import {RangeView} from './FormControls/RangeView.jsx';
+import {SliderView} from './FormControls/SliderView.jsx';
+import {CheckboxView} from './FormControls/CheckboxView.jsx';
+//import {SingleDatePickerView} from './FormControls/SingleDatePickerView.jsx';
+//import {DateRangePickerView} from './FormControls/DateRangePickerView.jsx';
 
 
-
-export default class DynamicForm extends React.Component {
+export  class DynamicForm extends React.Component {
 
     constructor(props) {
         super(props);
+        console.log("Constructor DynamicForm");
         this.state = {
             validationErrors: {},
             fieldValidations: [],
             fields: {},
             stage: "Initial"
         };
+        //console.log("Props Iterator");
         this.props.model.map((row, idx) => {    // row = each formControl , idx=index
-            // console.log("key :",row,row.label," - validations : ",row.fieldValidations);
+            //console.log("key :",row,row.label," - validations : ",row.fieldValidations);
             if (row.fieldValidations) {
                 //this.state.fields[row.key] = ""
                 let validations = [];
                 for (var key in row.fieldValidations) {  // key = validations like required,minLength
-                    // console.log(key);
+                    console.log(key);
                     switch (key) {
                         case 'required': {
                             if (row.fieldValidations[key] == true) {
@@ -92,6 +101,7 @@ export default class DynamicForm extends React.Component {
                 this.state.fieldValidations.push(ruleRunner(row.key, row.label, validations)); // (field, name, validations)
             }
         })
+        console.log("End Constructor");
 
     }
 
@@ -160,21 +170,6 @@ export default class DynamicForm extends React.Component {
     } // end of onChange()
 
 
-    /*
-    step 1: Group your model into rows of (at most) 2 elements, i.e.
-    [{key1},{key2},{key3},{key4}] => [ [{key1}],[{key2}], [{key3}],[{key4}] ]   = 1 group  = col-md-12
-    [{key1},{key2},{key3},{key4}] => [ [{key1}, {key2}], [{key3},{key4}] ]      = 2 groups = col-md-6
-    [{key1},{key2},{key3},{key4}] => [ [{key1}, {key2},{key3}],[{key4}] ]       = 3 groups = col-md-4
-    [{key1},{key2},{key3},{key4}] => [ [{key1}, {key2},{key3},{key4}] ]         = 4 groups = col-md-3
-
-    array of N elements, where N is the number of rows needed  Array(2) means ineach row we need 2 items
-    
-    step 2: Iterate over the groups to generate rows, and in an inner loop iterate over the items to display columns
-    
-    print source model form control each :  row :{idx} Col-{i} {JSON.stringify(m)}
-    
-    */
-
     renderForm = () => {
         let model = this.props.model;
         const { groups, columns } = this.props
@@ -227,10 +222,10 @@ export default class DynamicForm extends React.Component {
                         }
 
                         if (type === "SingleDatePicker") {
-                            input = <SingleDatePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            //input = <SingleDatePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
                         }
                         if (type === "DateRangePicker") {
-                            input = <DateRangePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            //input = <DateRangePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
                         }
                         return (
 
@@ -255,7 +250,7 @@ export default class DynamicForm extends React.Component {
     render() {
         return (
             <div>
-                {this.renderForm()}
+               {this.renderForm()}
             </div>
         )
     }

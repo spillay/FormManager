@@ -14,7 +14,7 @@ import {
 */
 
 
-export default class BlankForm extends React.Component {
+export  class BlankForm extends React.Component {
 
     constructor(props) {
         super(props);

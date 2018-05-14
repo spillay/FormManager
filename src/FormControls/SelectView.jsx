@@ -12,7 +12,7 @@ export class SelectView extends React.Component {
       dirty: false
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     //$('.selectpicker').selectpicker()
   }
 
@@ -59,7 +59,7 @@ export class SelectView extends React.Component {
     </div>;
 
 
-// console.log("select : Rendered....")
+    // console.log("select : Rendered....")
 
     return content
   }
