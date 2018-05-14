@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-//import moment from 'moment/moment';
+import moment from 'moment/moment';
+
+
 
 export class SingleDatePickerView extends React.Component {
 
@@ -43,6 +45,3 @@ SingleDatePickerView.propTypes = {
     onChange: PropTypes.func.isRequired,
     errorFor: PropTypes.func.isRequired
 }
-/*
-
-*/

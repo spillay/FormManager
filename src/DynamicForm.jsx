@@ -16,8 +16,8 @@ import {RadioView} from './FormControls/RadioView.jsx';
 import {RangeView} from './FormControls/RangeView.jsx';
 import {SliderView} from './FormControls/SliderView.jsx';
 import {CheckboxView} from './FormControls/CheckboxView.jsx';
-//import {SingleDatePickerView} from './FormControls/SingleDatePickerView.jsx';
-//import {DateRangePickerView} from './FormControls/DateRangePickerView.jsx';
+import {SingleDatePickerView} from './FormControls/SingleDatePickerView.jsx';
+import {DateRangePickerView} from './FormControls/DateRangePickerView.jsx';
 
 
 export  class DynamicForm extends React.Component {
@@ -222,10 +222,10 @@ export  class DynamicForm extends React.Component {
                         }
 
                         if (type === "SingleDatePicker") {
-                            //input = <SingleDatePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            input = <SingleDatePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
                         }
                         if (type === "DateRangePicker") {
-                            //input = <DateRangePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
+                            input = <DateRangePickerView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} options={options} />
                         }
                         return (
 
@@ -255,4 +255,8 @@ export  class DynamicForm extends React.Component {
         )
     }
 
+}
+DynamicForm.propTypes = {
+    model: PropTypes.array.isRequired,
+    reload: PropTypes.func.isRequired
 }
