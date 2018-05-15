@@ -64,7 +64,7 @@ export class LoginView extends Component {
                     <div className="row">
                         <div className="col-md-6 offset-md-4">
                             <div className="card" style={{ width: '30rem' }}>
-                                <img className="card-img-top custom-image mx-auto img-thumbnail" alt="South Africa" />
+                                <img className="card-img-top custom-image mx-auto img-thumbnail" src={this.props.logo} alt="logo" />
                                 <div className="card-body">
                                     <span><i className="fa fa fa-forward" aria-hidden="true"></i>  Login </span>
                                     <form onSubmit={this.handleSubmit}>
