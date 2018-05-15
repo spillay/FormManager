@@ -1,5 +1,19 @@
 
-	.validation-error{
+    .card {
+        box-shadow: $box-shadow;
+        border-left-color:$fa-color1;  
+        border-left-width: .3rem;  
+        border-radius: 9px;
+    }
+    
+    
+    
+    .card-header {
+        background-image: $background-image;
+        
+    }
+    
+    .validation-error{
 		color: #dc3545 !important;
 		font:  10px Verdana, "Verdana CE", Arial, "Arial CE",
 			"Lucida Grande CE", lucida, "Helvetica CE", Helvetica !important;			
