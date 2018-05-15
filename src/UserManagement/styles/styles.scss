@@ -1,4 +1,4 @@
 @import "~bootstrap/scss/bootstrap.scss"; 
-@import "~@spillay/formmanager/dist/css/formmanager.css";
-
-
+// @import "~@spillay/formmanager/dist/css/formmanager.css";
+@import './base/settings';
+@import './base/app';

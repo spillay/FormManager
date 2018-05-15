@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { run,ruleRunner } from './FormValidation/ruleRunner';
+import { run, ruleRunner } from './FormValidation/ruleRunner';
 import {
     required, isSDP, isDRP, isSlider, isString, isNumber, isCurrency,
     isCellnumber, minLength, maxLength, emailFormat
@@ -9,18 +9,18 @@ import {
 // import {
 //     TextView, TextAreaView, SelectView, RadioView, RangeView, SliderView, CheckboxView, SingleDatePickerView, DateRangePickerView
 // } from './FormControls'
-import {TextView} from './FormControls/TextView.jsx';
-import {TextAreaView} from './FormControls/TextAreaView.jsx';
-import {SelectView} from './FormControls/SelectView.jsx';
-import {RadioView} from './FormControls/RadioView.jsx';
-import {RangeView} from './FormControls/RangeView.jsx';
-import {SliderView} from './FormControls/SliderView.jsx';
-import {CheckboxView} from './FormControls/CheckboxView.jsx';
-import {SingleDatePickerView} from './FormControls/SingleDatePickerView.jsx';
-import {DateRangePickerView} from './FormControls/DateRangePickerView.jsx';
+import { TextView } from './FormControls/TextView.jsx';
+import { TextAreaView } from './FormControls/TextAreaView.jsx';
+import { SelectView } from './FormControls/SelectView.jsx';
+import { RadioView } from './FormControls/RadioView.jsx';
+import { RangeView } from './FormControls/RangeView.jsx';
+import { SliderView } from './FormControls/SliderView.jsx';
+import { CheckboxView } from './FormControls/CheckboxView.jsx';
+import { SingleDatePickerView } from './FormControls/SingleDatePickerView.jsx';
+import { DateRangePickerView } from './FormControls/DateRangePickerView.jsx';
 
 
-export  class DynamicForm extends React.Component {
+export class DynamicForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -250,7 +250,7 @@ export  class DynamicForm extends React.Component {
     render() {
         return (
             <div>
-               {this.renderForm()}
+                {this.renderForm()}
             </div>
         )
     }

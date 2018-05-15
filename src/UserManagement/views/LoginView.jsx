@@ -109,7 +109,7 @@ export class LoginView extends Component {
 LoginView.propTypes = {
     groups: PropTypes.number.isRequired,
     columns: PropTypes.string.isRequired,
-    // modelForm: PropTypes.object.isRequired,
+    modelForm: PropTypes.object.isRequired,
     submitFunc: PropTypes.func.isRequired
 };
 
