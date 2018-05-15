@@ -51,10 +51,15 @@ module.exports = {
           'sass-loader' // compiles Sass to CSS
         ]
       },
-      {
-        test: /\.(eot|woff|woff2|ttf|svg|png|PNG|jpe?g|gif)(\?\S*)?$/,
+       {
+        test: /\.(png|PNG|jpg|jpeg|gif|svg|woff|woff2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
+      }, 
+      {
+        test: /\.(eot|ttf|wav|mp3|pdf)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
       }
+      
     ]
   },
 
