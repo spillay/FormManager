@@ -1,5 +1,21 @@
 
-   
+   html {
+	font-size: 13px; 
+	font-family:$font-family
+	
+	}
+  
+  body {
+	font-weight: 400;
+	font-size: 1rem;
+	font-family: $font-family;
+	line-height: 1.6;
+	color: #555;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+    }
+    
     .validation-error{
 		color: #dc3545 !important;
 		font:  10px Verdana, "Verdana CE", Arial, "Arial CE",
