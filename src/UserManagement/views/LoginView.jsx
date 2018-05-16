@@ -68,7 +68,7 @@ export class LoginView extends Component {
                                 <img className="card-img-top custom-image mx-auto img-thumbnail" src={this.props.logo} alt="logo" />
                                 <div className="card-body">
                                     <span><i className="fa fa fa-forward" aria-hidden="true"></i>  Login </span>
-                                    <form onSubmit={this.handleSubmit}>
+                                    <form onSubmit={this.props.submitFunc}>
                                         <ErrorBoundary>
                                             <DynamicForm           // configure the form  controls
                                                 model={this.props.modelForm}
