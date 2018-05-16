@@ -24,6 +24,8 @@
     "clean": "rimraf dist/ && rimraf test-dist/",
     "sass:dist-min": "node-sass  --output-style=compressed --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/formmanager.min.css",
     "sass:dist": "node-sass  --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/formmanager.css",
+    "sass:dist-ucm-min": "node-sass  --output-style=compressed --importer=node_modules/node-sass-tilde-importer src/UserManagement/styles/styles.scss > dist/css/ucm.min.css",
+    "sass:dist-ucm": "node-sass  --importer=node_modules/node-sass-tilde-importer src/UserManagement/styles/styles.scss > dist/css/ucm.css",
     "sass": "npm run sass:dist-min && npm run sass:dist",
     "prebuild": "mkdirp ./dist && mkdirp ./dist/css"
   },
