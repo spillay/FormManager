@@ -1,13 +1,13 @@
 
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; 
 	border-left-color:#F89406!important;  
-	border-left-width: .3rem;  
-	border-radius: 9px;
+	border-left-width: .3rem!important;   
+	border-radius: 9px!important; 
 }
 
 .card-header {
-	background-image:-webkit-radial-gradient(right center, ellipse farthest-side, #FFFFFF 0%,#B0B0B0 300%);
+	background-image:-webkit-radial-gradient(right center, ellipse farthest-side, #FFFFFF 0%,#B0B0B0 300%)!important; 
 	
 }
 
