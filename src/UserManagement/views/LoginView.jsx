@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AuthService from '../service/AuthService';
 import ErrorBoundary from '../../utils/ErrorBoundary';
 import { DynamicForm } from '../../DynamicForm';
-import '../styles/loginview.css'
 
 // import 'bootstrap';
 // import 'bootstrap-select';
