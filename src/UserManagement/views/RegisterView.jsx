@@ -4,12 +4,6 @@ import AuthService from '../service/AuthService';
 import ErrorBoundary from '../../utils/ErrorBoundary';
 import { DynamicForm } from '../../DynamicForm';
 
-// import 'bootstrap';
-// import 'bootstrap-select';
-
-// import 'react-dates/initialize';
-// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
-
 export class RegisterView extends Component {
     constructor(props) {
         super(props);
