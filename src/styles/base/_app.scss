@@ -76,16 +76,26 @@ label {
 }
 // end of slider
 
-
+// fontowsome icons :
 .fa.fa-lock{
 	color:$fa-color1
 }
 
 .fa-refresh.fa-spin{
-	color:red;	
+	color:$fa-color2;	
+}
+
+.fa-check-square-o{
+	color:$fa-color1;
+}
+
+.fa.fa-forward{
+	color:$fa-color1;
 }
 
 
+
+// card
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; 
 	border-left-color:#F89406!important;  
@@ -98,12 +108,15 @@ label {
 	
 }
 
-
+// padding
 .pt-7 {
 	padding-top: 70px!important;
-
 }
 
+// margin
+
+
+// images
 .custom-image{
     border:none!important;
       opacity: 0.4!important; 
