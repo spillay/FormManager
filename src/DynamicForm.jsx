@@ -189,7 +189,7 @@ export class DynamicForm extends React.Component {
 
                 {
                     row.map((m, idx) => {
-                        let { key, type, fieldValidations, label, name, value, autoComplete, icon, opts, options } = m
+                        let { key, type, fieldValidations, label, name, value, autoComplete, icon,header, opts, options } = m
                         value = this.state.fields[key];
                         let input;
 
@@ -202,7 +202,7 @@ export class DynamicForm extends React.Component {
                         }
 
                         if (type == "select") {
-                            input = <SelectView _key={key} label={label} errorFor={this.errorFor} onChange={this.onChange} opts={opts} options={options} />
+                            input = <SelectView _key={key} label={label} header={header} errorFor={this.errorFor} onChange={this.onChange} opts={opts} options={options} />
 
                         }
 

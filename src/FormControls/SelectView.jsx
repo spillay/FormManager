@@ -47,8 +47,8 @@ export class SelectView extends React.Component {
         className={this.getClassName() + ' selectpicker show-tick show-menu-arrow'}
         width='100px'
         title="Choose one"
-        data-size="5"
-        data-header="Role..."
+        data-size="15"
+        data-header={this.props.header}
         // data-live-search="false"
         {...this.props.opts}
         onChange={(e) => this.onChange(e)}>

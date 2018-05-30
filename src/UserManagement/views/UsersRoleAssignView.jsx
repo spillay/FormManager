@@ -64,8 +64,8 @@ export class UsersRoleAssignView extends Component {
                                 <div className="card-header">
                                     <div className="row">
                                         <div className="col-md-12">
-                                            <img src={this.props.logo} width="2.1%" /> <code>User's Multy Role Assign.</code>
-                                            <span className="text-muted font-italic  offset-md-8"> <i className="fa fa fa-forward" aria-hidden="true"></i> Long way to go...</span>
+                                            <img src={this.props.logo} width="2.1%" /> <code>User's Multiple Role Assign.</code>
+                                            <span className="text-muted font-italic  offset-md-6"> <i className="fa fa fa-forward" aria-hidden="true"></i> Long way to go...</span>
                                         </div>
                                     </div>
                                 </div>
