@@ -8,7 +8,7 @@ export default class AuthService {
         // return this.fetch(`${this.domain}/api/auth/signup`, {
         //     method: 'POST',
         //     body: JSON.stringify( {identifier: username,  password: password,email: email,firstName: firstName,lastName: lastName} )
-        // }).then(res => {
+        // }).then((res) => {
         //     return Promise.resolve(res);
         // })
         return Promise.resolve({token:"testtoken",expires:"01/01/2019"});
