@@ -11,11 +11,14 @@ export class SingleDatePickerView extends React.Component {
     constructor(props) {
         super(props);
         //this.state = {date:moment()}
-        this.state = { date: null }
+        this.state = { value: null,dirty: false }
     }
     onDateChange = (date) => {
-        this.setState({ date: date });
+        //this.setState({ date: date });
         //this.props.onChange({ target: { value: date.format("MMM Do YYYY") } }, this.props._key)
+        this.setState({ value: date, dirty: true }, () => {
+            this.props.onChange({ target: { value: this.state.value } }, this.props._key)
+        })
     }
     onFocusChange = ({ focused }) => {
         this.setState({ focused })
@@ -25,7 +28,7 @@ export class SingleDatePickerView extends React.Component {
         return (
             <div key={this.props._key} >
                 <SingleDatePicker
-                    date={this.state.date} // momentPropTypes.momentObj or null  current date
+                    date={this.state.value} // momentPropTypes.momentObj or null  current date
                     onDateChange={this.onDateChange} // PropTypes.func.isRequired
                     focused={this.state.focused} // PropTypes.bool
                     onFocusChange={this.onFocusChange}

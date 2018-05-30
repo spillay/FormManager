@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import AuthService from '../service/AuthService';
 import ErrorBoundary from '../../utils/ErrorBoundary';
 import { DynamicForm } from '../../DynamicForm';
 
@@ -8,7 +7,6 @@ export class RegisterView extends Component {
     constructor(props) {
         super(props);
         console.log("in RegisterView constructor");
-        this.Auth = new AuthService();
         this.state = {
             submitted: false
         }
@@ -42,13 +40,7 @@ export class RegisterView extends Component {
         if (this.dynForm.checkValidations() == true) {
             var data = this.dynForm.getData();
             this.setState({ submitted: true })
-            console.log("now you can submit...", data);  // alert("now you can submit..."+JSON.stringify(data))
-            this.Auth.login(data).then((res) => {
-                console.log(res);
-                this.props.submitFunc(res);
-            }).catch((error) => {
-                console.log(`error :${error}`)
-            })
+            this.props.submitFunc(data);
         }
     }
     render() {
@@ -68,7 +60,7 @@ export class RegisterView extends Component {
                                 </div>
 
                                 <div className="card-body">
-                                    <form onSubmit={this.props.submitFunc}>
+                                    <form onSubmit={this.handleSubmit}>
                                         <ErrorBoundary>
                                             <DynamicForm           // configure the form  controls
                                                 model={this.props.modelForm}
